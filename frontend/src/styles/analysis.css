@@ -1,0 +1,10 @@
+.analysis-box {
+  background: #f9fafb;
+  border-left: 4px solid #2563eb;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.analysis-box ul {
+  padding-left: 20px;
+}

@@ -1,0 +1,59 @@
+.applications-page {
+  padding: 20px;
+}
+
+.application-form {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.application-form input,
+.application-form textarea,
+.application-form select {
+  margin-bottom: 10px;
+}
+
+
+.applications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.application-card {
+  background: white;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.application-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.application-status {
+  margin-left: auto;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.role-name {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.application-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}

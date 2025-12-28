@@ -1,0 +1,70 @@
+.recent-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+.recent-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.recent-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.recent-item:last-child {
+  border-bottom: none;
+}
+
+.company {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.role {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Status colors */
+.status.applied {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.status.interview {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.offer {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}

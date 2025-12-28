@@ -1,0 +1,26 @@
+.page-container {
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card h4 {
+  margin: 0 0 8px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-cls{
+    display: flex;
+    gap: 10px;
+}

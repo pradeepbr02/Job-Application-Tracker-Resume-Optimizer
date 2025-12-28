@@ -1,0 +1,45 @@
+.analysis-card {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.analysis-score {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.analysis-score span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.analysis-section {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.analysis-section strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.analysis-section.success {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.analysis-section.warning {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.analysis-section.info {
+  background: #eff6ff;
+  color: #1e40af;
+}

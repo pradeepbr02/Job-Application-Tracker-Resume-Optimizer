@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2563eb;
+  color: white;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+}
+
+input, select, textarea {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+.btn-cls{
+    display: flex;
+    gap: 10px;
+}
