@@ -11,7 +11,7 @@ import analyticsRoute from './src/routes/analytics.routes.js'
 const app = express()
 const allowedOrigins = [
   "http://localhost:3000",
-  process.env.FRONTEND_URL
+  "https://job-application-tracker-resume-optimizer-if68k3elg.vercel.app/"
 ];
 app.use(
   cors({
