@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import {
   getApplicationNotes,
   updateJobApplicationNotes,
@@ -9,14 +9,15 @@ const ApplicationNotes = ({ appId }) => {
   const [notes, setNotes] = useState([])
   const [text, setText] = useState('')
 
-  useEffect(() => {
-    fetchApplicationNotes()
-  }, [])
-
-  const fetchApplicationNotes = async () => {
+  const fetchApplicationNotes = useCallback(async () => {
+    if (!appId) return
     const data = await getApplicationNotes(appId)
     setNotes(data)
-  }
+  }, [appId])
+
+  useEffect(() => {
+    fetchApplicationNotes()
+  }, [fetchApplicationNotes])
 
   const handleAddNote = async (e) => {
     e.preventDefault()
