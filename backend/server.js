@@ -7,6 +7,7 @@ dotenv.config()
 const PORT = process.env.PORT || 5000
 const startServer = async()=>{
     try{
+        console.log(process.env.MONGO_URI)
         await mongoose.connect(process.env.MONGO_URI) 
         console.log("Connected to DB")
         

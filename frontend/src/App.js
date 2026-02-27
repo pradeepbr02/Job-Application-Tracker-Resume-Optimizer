@@ -6,12 +6,16 @@ import ProtectedRoute from './components/ProtectedRoute.js';
 import Application from './pages/Application.js';
 import ResumeUpload from './pages/ResumeUpload.js';
 import Analytics from './pages/Analytics.js';
+import Landing from './pages/Landing.js';
+import Signup from './pages/Signup.js';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
+      <Route path='/' element={<Landing/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
       <Route path='/dashboard' 
       element={
       <ProtectedRoute>
