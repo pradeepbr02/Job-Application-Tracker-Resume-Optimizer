@@ -13,7 +13,7 @@ const Login = ()=>{
         if(token){
            navigate('/dashboard')
         }
-    } , [navigate, token])
+    } , [navigate])
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
