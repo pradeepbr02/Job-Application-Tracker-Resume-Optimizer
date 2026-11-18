@@ -7,7 +7,12 @@ dotenv.config()
 const PORT = process.env.PORT || 5000
 const startServer = async()=>{
     try{
-        console.log(process.env.MONGO_URI)
+        const required = ['MONGO_URI', 'JWT_SECRET'];
+        if (process.env.NODE_ENV === 'production') required.push('CLIENT_URL');
+        const missing = required.filter((key) => !process.env[key]?.trim());
+        if (missing.length) {
+            throw new Error(`Missing required environment variables: ${missing.join(', ')}`);
+        }
         await mongoose.connect(process.env.MONGO_URI) 
         console.log("Connected to DB")
         
@@ -16,7 +21,7 @@ const startServer = async()=>{
         })
     }
     catch(err){
-        console.log("Failed to connect to DB" , err.message)
+        console.error("Failed to start server" , err.message)
         process.exit(1)
     }
     

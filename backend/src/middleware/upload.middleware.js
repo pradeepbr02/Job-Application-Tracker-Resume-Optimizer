@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs'
 
 
-const uploadDir = 'uploads/resumes'
+const uploadDir = process.env.UPLOAD_DIR || 'uploads/resumes'
 
 if(!fs.existsSync(uploadDir)){
     fs.mkdirSync(uploadDir , {recursive:true})

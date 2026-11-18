@@ -25,6 +25,6 @@ services:
     networks:
       - jtro-network
 
-networks:
+networks: 
   jtro-network:
     driver: bridge

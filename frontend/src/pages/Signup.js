@@ -6,10 +6,12 @@ import { useNavigate } from "react-router-dom";
 export default function Signup() {
     const navigate = useNavigate();
   const [form, setForm] = useState({
-    username: "",
+    name: "",
     email: "",
     password: ""
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,12 +19,17 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
     try{
         await registerUser(form)
         navigate('/login')
     }
-    catch{
-        console.log(e.error)
+    catch(error){
+        setError(error.message);
+    }
+    finally{
+        setLoading(false);
     }
   };
 
@@ -34,6 +41,8 @@ export default function Signup() {
         <input
           type="text"
           name="name"
+          aria-label="Full Name"
+          value={form.name}
           placeholder="Full Name"
           onChange={handleChange}
           required
@@ -42,6 +51,8 @@ export default function Signup() {
         <input
           type="email"
           name="email"
+          aria-label="Email"
+          value={form.email}
           placeholder="Email"
           onChange={handleChange}
           required
@@ -50,12 +61,17 @@ export default function Signup() {
         <input
           type="password"
           name="password"
+          aria-label="Password"
+          value={form.password}
           placeholder="Password"
           onChange={handleChange}
           required
         />
 
-        <button type="submit">Sign Up</button>
+        {error && <p role="alert">{error}</p>}
+        <button type="submit" disabled={loading}>
+          {loading ? "Signing up..." : "Sign Up"}
+        </button>
       </form>
     </div>
   );
